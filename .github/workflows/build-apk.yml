@@ -28,6 +28,8 @@ jobs:
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
+        with:
+          packages: ''   # 跳过已被移除的 'tools' 包，修复构建失败
 
       - name: Build APK
         run: |
